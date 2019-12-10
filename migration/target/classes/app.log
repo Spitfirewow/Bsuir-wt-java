@@ -1,0 +1,42 @@
+10 дек. 2019 20:41:34,348 [main] INFO  service.validation.XmlService - XML file validated successfully.
+10 дек. 2019 20:41:34,616 [main] ERROR service.validation.XmlService - SERVICE: Cannot deserialize value of type `byte[]` from String "qwerty": Unexpected end of base64-encoded String: base64 variant 'MIME-NO-LINEFEEDS' expects padding (one or more '=' characters) at the end
+ at [Source: (File); line: 83, column: 33] (through reference chain: entity.CoffeeData["Users"]->java.util.ArrayList[0]->entity.User["passwordHash"])
+10 дек. 2019 20:45:47,001 [main] ERROR service.validation.XmlService - SERVICE: cvc-datatype-valid.1.2.1: 'MTIzNDEyMzQxMjM0' is not a valid value for 'integer'.
+10 дек. 2019 20:51:44,831 [main] INFO  service.validation.XmlService - XML file validated successfully.
+10 дек. 2019 20:51:45,102 [main] INFO  service.validation.XmlService - XML file deserialized successfully.
+10 дек. 2019 20:51:45,266 [main] ERROR service.jdbc.JdbcConnectionService - SERVICE: The server time zone value 'RTZ 2 (çèìà)' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+10 дек. 2019 20:54:08,378 [main] INFO  service.validation.XmlService - XML file validated successfully.
+10 дек. 2019 20:54:08,625 [main] INFO  service.validation.XmlService - XML file deserialized successfully.
+10 дек. 2019 20:54:08,794 [main] INFO  service.jdbc.JdbcConnectionService - Database connection has been established successfully.
+10 дек. 2019 20:54:08,796 [main] INFO  service.migration.ExtraMigrationService - MIGRATION STARTED: extras.
+10 дек. 2019 20:54:08,819 [main] WARN  service.migration.ExtraMigrationService - No value specified for parameter 4
+10 дек. 2019 20:54:08,819 [main] WARN  service.migration.ExtraMigrationService - No value specified for parameter 4
+10 дек. 2019 20:54:08,819 [main] INFO  service.migration.ExtraMigrationService - MIGRATION COMPLETED: extras, 0/2.
+10 дек. 2019 20:54:08,820 [main] INFO  service.migration.CoffeeMigrationService - MIGRATION STARTED: coffees.
+10 дек. 2019 20:54:08,821 [main] WARN  service.migration.CoffeeMigrationService - No value specified for parameter 6
+10 дек. 2019 20:54:08,821 [main] WARN  service.migration.CoffeeMigrationService - No value specified for parameter 6
+10 дек. 2019 20:54:08,822 [main] WARN  service.migration.CoffeeMigrationService - No value specified for parameter 6
+10 дек. 2019 20:54:08,823 [main] INFO  service.migration.CoffeeMigrationService - MIGRATION COMPLETED: coffees, 0/3.
+10 дек. 2019 20:54:08,824 [main] INFO  service.migration.ToppingMigrationService - MIGRATION STARTED: toppings.
+10 дек. 2019 20:54:08,839 [main] INFO  service.migration.ToppingMigrationService - Topping@a44dfcb1 {super:Topping@a44dfcb1 {id:1}, name:'Cinnamon'} migrated successfully.
+10 дек. 2019 20:54:08,841 [main] INFO  service.migration.ToppingMigrationService - Topping@c25c3721 {super:Topping@c25c3721 {id:2}, name:'nutmeg'} migrated successfully.
+10 дек. 2019 20:54:08,842 [main] INFO  service.migration.ToppingMigrationService - MIGRATION COMPLETED: toppings, 2/2.
+10 дек. 2019 20:54:08,842 [main] INFO  service.migration.CoffeeToppingMigrationService - MIGRATION STARTED: coffee_toppings.
+10 дек. 2019 20:54:08,845 [main] INFO  service.migration.CoffeeToppingMigrationService - CoffeeTopping@7840 {super:CoffeeTopping@7840 {id:1}, toppingId:1, coffeeId:1} migrated successfully.
+10 дек. 2019 20:54:08,846 [main] INFO  service.migration.CoffeeToppingMigrationService - CoffeeTopping@7c20 {super:CoffeeTopping@7c20 {id:2}, toppingId:2, coffeeId:1} migrated successfully.
+10 дек. 2019 20:54:08,847 [main] INFO  service.migration.CoffeeToppingMigrationService - CoffeeTopping@7fc3 {super:CoffeeTopping@7fc3 {id:3}, toppingId:1, coffeeId:2} migrated successfully.
+10 дек. 2019 20:54:08,849 [main] INFO  service.migration.CoffeeToppingMigrationService - CoffeeTopping@83a3 {super:CoffeeTopping@83a3 {id:4}, toppingId:2, coffeeId:2} migrated successfully.
+10 дек. 2019 20:54:08,849 [main] INFO  service.migration.CoffeeToppingMigrationService - MIGRATION COMPLETED: coffee_toppings, 4/4.
+10 дек. 2019 20:54:08,850 [main] INFO  service.migration.UserMigrationService - MIGRATION STARTED: users.
+10 дек. 2019 20:54:08,852 [main] INFO  service.migration.UserMigrationService - User@d6ca6fc2 {super:User@d6ca6fc2 {id:1}, login:'aaaaa', passwordHash:[113, 119, 101, 114, 116, 121, 113, 119, 101, 114, 116, 121, 113, 119, 101, 114, 116, 121], passwordSalt:[49, 50, 51, 52, 49, 50, 51, 52, 49, 50, 51, 52], admin:true} migrated successfully.
+10 дек. 2019 20:54:08,853 [main] INFO  service.migration.UserMigrationService - User@6394f121 {super:User@6394f121 {id:2}, login:'qqqqq', passwordHash:[97, 98, 99, 100, 101, 97, 98, 99, 100, 101, 97, 98, 99, 100, 101, 97, 98, 99, 100, 101, 97, 98, 99, 100, 101], passwordSalt:[51, 50, 49, 51, 50, 49, 51, 50, 49, 51, 50, 49, 51, 50, 49], admin:false} migrated successfully.
+10 дек. 2019 20:54:08,853 [main] INFO  service.migration.UserMigrationService - MIGRATION COMPLETED: users, 2/2.
+10 дек. 2019 20:54:08,854 [main] INFO  service.migration.OrderMigrationService - MIGRATION STARTED: orders.
+10 дек. 2019 20:54:08,856 [main] INFO  service.migration.OrderMigrationService - Order@194210d5 {super:Order@194210d5 {id:1}, dateTime:'2019-12-10 20:27:00', ready:true, userId:1} migrated successfully.
+10 дек. 2019 20:54:08,856 [main] INFO  service.migration.OrderMigrationService - MIGRATION COMPLETED: orders, 1/1.
+10 дек. 2019 20:54:08,857 [main] INFO  service.migration.OrderedExtraMigrationService - MIGRATION STARTED: ordered_extras.
+10 дек. 2019 20:54:08,858 [main] INFO  service.migration.OrderedExtraMigrationService - OrderedExtra@e8fe0 {super:OrderedExtra@e8fe0 {id:1}, count:1, extraId:2, orderId:1} migrated successfully.
+10 дек. 2019 20:54:08,859 [main] INFO  service.migration.OrderedExtraMigrationService - MIGRATION COMPLETED: ordered_extras, 1/1.
+10 дек. 2019 20:54:08,859 [main] INFO  service.migration.OrderedCoffeeMigrationService - MIGRATION STARTED: ordered_coffees.
+10 дек. 2019 20:54:08,861 [main] INFO  service.migration.OrderedCoffeeMigrationService - OrderedCoffee@5c8c68a5 {super:OrderedCoffee@5c8c68a5 {id:1}, size:LARGE, count:1, coffeeId:2, orderId:1} migrated successfully.
+10 дек. 2019 20:54:08,862 [main] INFO  service.migration.OrderedCoffeeMigrationService - MIGRATION COMPLETED: ordered_coffees, 1/1.

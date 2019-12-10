@@ -1,0 +1,143 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="coffeeData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Extras">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="extra" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="name"/>
+                    <xs:element type="xs:double" name="price"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="id" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Coffees">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="coffee" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="name"/>
+                    <xs:element type="xs:byte" name="weightS"/>
+                    <xs:element type="xs:short" name="weightM"/>
+                    <xs:element type="xs:short" name="weightL"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="id" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Toppings">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="topping" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="name"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="id" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CoffeeToppings">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="coffeeTopping" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:byte" name="toppingId"/>
+                    <xs:element type="xs:byte" name="coffeeId"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="id" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Orders">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="order">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="dateTime"/>
+                    <xs:element type="xs:boolean" name="ready"/>
+                    <xs:element type="xs:byte" name="userId"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="id"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OrderedCoffees">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="orderedCoffee">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="size">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="SMALL"/>
+                          <xs:enumeration value="MEDIUM"/>
+                          <xs:enumeration value="LARGE"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element type="xs:byte" name="count"/>
+                    <xs:element type="xs:byte" name="coffeeId"/>
+                    <xs:element type="xs:byte" name="orderId"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="id"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="OrderedExtras">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="orderedExtra">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:byte" name="count"/>
+                    <xs:element type="xs:byte" name="extraId"/>
+                    <xs:element type="xs:byte" name="orderId"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="id"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Users">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="user" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="login"/>
+                    <xs:element type="xs:base64Binary" name="passwordHash"/>
+                    <xs:element type="xs:base64Binary" name="passwordSalt"/>
+                    <xs:element type="xs:boolean" name="admin"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="id" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info" name="AppLogConfig">
+    <Properties>
+        <Property name="LogFileName">src/main/resources/app.log</Property>
+        <Property name="Pattern">%d{DATE} [%t] %-5p %c{5} - %m%n</Property>
+        <Property name="ConsoleAppenderName">ConsoleAppender</Property>
+        <Property name="FileAppenderName">FileAppender</Property>
+    </Properties>
+
+    <Appenders>
+        <Console name="${ConsoleAppenderName}" target="SYSTEM_OUT">
+            <PatternLayout pattern="${Pattern}"/>
+        </Console>
+        <File name="${FileAppenderName}" fileName="${LogFileName}">
+            <PatternLayout pattern="${Pattern}"/>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="${ConsoleAppenderName}"/>
+            <AppenderRef ref="${FileAppenderName}"/>
+        </Root>
+    </Loggers>
+
+</Configuration>
